@@ -107,10 +107,6 @@ nav{
       border-top: 1px solid #000;
   }
 
-  .nav-menu-right-container{
-      margin-top: 10px;
-  }
-
   nav{
       flex-direction: column;
       align-items: flex-start;
@@ -158,11 +154,6 @@ nav{
         display: none;
         width: 100%;
         border-top: 1px solid #000;
-        margin-bottom: 20px;
-    }
-
-    .nav-menu-right-container{
-        margin-top: 10px;
     }
 
     nav{
@@ -171,26 +162,21 @@ nav{
     }
 
     .nav-menu{
-        display: flex;
-        flex-direction: column;
-        margin-right: 0px;
-        width: 100%;
-        border-radius: 5px;
-        margin: 0px 10px;
-    }
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 20px 0px;
+  }
 
-    .nav-menu a {
-        padding: 15px 0px 15px 20px;
-    }
+  .nav-menu a {
+      padding: 15px 20px 15px 20px;
+      font-size: 18px;
+  }
 
-    .icon-nav.material-symbols-outlined{
-        display: none;
-    }
-
-    .nav-section-menu.about-team{
-        display: block;
-    }
-
+  .nav-section-menu{
+    margin: 0px 10px;
+    border-radius: 5px;
+  }
     .active{
         display: block;
     }

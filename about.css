@@ -36,7 +36,13 @@ nav{
 }
 
 .nav-menu{
+  margin-right: 40px;
   display: block;
+}
+
+.nav-menu-right-container{
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-section-menu{
@@ -48,6 +54,10 @@ nav{
   height: 20px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.nav-section-menu.about-team{
+  display: none;
 }
 
 .nav-section-menu:hover{
@@ -76,6 +86,11 @@ nav{
       padding: 20px 0px 20px 20px;
   }
 
+  .nav-section-menu{
+    margin: 0px 10px;
+    border-radius: 5px;
+  }
+
   .toggle-button{
       display: block;
   }
@@ -86,11 +101,10 @@ nav{
       border-radius: 50%
   }
 
-  .nav-menu-right{
+  .nav-menu-right {
       display: none;
       width: 100%;
       border-top: 1px solid #000;
-      margin-bottom: 20px;
   }
 
   nav{
@@ -101,14 +115,12 @@ nav{
   .nav-menu{
       display: flex;
       flex-direction: column;
-      margin-right: 0px;
       width: 100%;
-      border-radius: 5px;
-      margin: 0px 10px;
+      margin: 10px 0px;
   }
 
   .nav-menu a {
-      padding: 15px 0px 15px 20px;
+      padding: 15px 20px 15px 20px;
       font-size: 16px;
   }
 
@@ -117,56 +129,58 @@ nav{
   }
 }
 
-/* tablet view */
-@media (min-width: 769px) and (max-width: 1024px){
-  nav{
-      padding: 0px;
-  }
+  /* tablet view */
+  @media (min-width: 769px) and (max-width: 1024px){
+    nav{
+        padding: 0px;
+    }
 
-  .nav-h1{
-      font-size: 18px;
-      padding: 20px 0px 20px 20px;
-  }
+    .nav-h1{
+        font-size: 18px;
+        padding: 20px 0px 20px 20px;
+    }
 
-  .toggle-button{
-      display: block;
-  }
+    .toggle-button{
+        display: block;
+    }
 
-  .toggle-button:hover{
-      background-color: #E15240;
-      color: #fff;
-      border-radius: 50%
-  }
+    .toggle-button:hover{
+        background-color: #E15240;
+        color: #fff;
+        border-radius: 50%
+    }
 
-  .nav-menu-right{
-      display: none;
-      width: 100%;
-      border-top: 1px solid #000;
-      margin-bottom: 20px;
-  }
+    .nav-menu-right{
+        display: none;
+        width: 100%;
+        border-top: 1px solid #000;
+    }
 
-  nav{
-      flex-direction: column;
-      align-items: flex-start;
-  }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .nav-menu{
+    .nav-menu{
       display: flex;
       flex-direction: column;
-      margin-right: 0px;
       width: 100%;
-      border-radius: 5px;
-      margin: 0px 10px;
+      margin: 20px 0px;
   }
 
   .nav-menu a {
-      padding: 15px 0px 15px 20px;
+      padding: 15px 20px 15px 20px;
+      font-size: 18px;
   }
 
-  .active{
-      display: block;
+  .nav-section-menu{
+    margin: 0px 10px;
+    border-radius: 5px;
   }
-}
+    .active{
+        display: block;
+    }
+  }
 
 /* title */
 .title {
