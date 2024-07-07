@@ -1,9 +1,16 @@
  // Toggle menu
  const toggleButton = document.getElementById('toggle-button');
  const navLists = document.getElementById('nav-menu-right');
-
+ const navLinks = document.querySelectorAll('.nav-section-menu');
+ 
  toggleButton.addEventListener('click', () => {
      navLists.classList.toggle('active');
+ });
+ 
+ navLinks.forEach(link => {
+     link.addEventListener('click', () => {
+         navLists.classList.remove('active');
+     });
  });
 
  // Slider

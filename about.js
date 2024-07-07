@@ -1,10 +1,17 @@
 //toggle menu
 const toggleButton = document.getElementById('toggle-button');
 const navLists = document.getElementById('nav-menu-right');
+const navLinks = document.querySelectorAll('.nav-section-menu');
 
 toggleButton.addEventListener('click', () => {
     navLists.classList.toggle('active');
-})
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLists.classList.remove('active');
+    });
+});
 
 //pop up
 document.addEventListener('DOMContentLoaded', () => {
@@ -96,3 +103,31 @@ function toggleAnimation(element) {
         });
     }
     });
+
+//menyembunyikan message icon yang berada di footer area
+const messageIcon = document.getElementById('messageIcon');
+const footerSide = document.querySelector('.footer-side');
+
+// Function to handle visibility of messageIcon based on scroll
+function handleScroll() {
+    if (isMessageIconInFooter()) {
+        messageIcon.style.visibility = 'hidden';
+    } else {
+        messageIcon.style.visibility = 'visible';
+    }
+}
+
+// Function to check if messageIcon is within footer-side
+function isMessageIconInFooter() {
+    const iconRect = messageIcon.getBoundingClientRect();
+    const footerRect = footerSide.getBoundingClientRect();
+
+    // Check if messageIcon's bottom is less than footer-side's top
+    return iconRect.bottom > footerRect.top && iconRect.top < footerRect.bottom;
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', handleScroll);
+
+// Initial check on page load
+handleScroll();
